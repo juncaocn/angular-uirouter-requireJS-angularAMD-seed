@@ -1,0 +1,12 @@
+<section>
+    <!--<ul>
+        <li><a ui-sref='a'>aaaaa</a></li>
+        <li><a ui-sref='b'>bbbbb</a></li>
+    </ul>-->
+
+    <ul>
+        <div ng-repeat="menu in menus">
+            <li><a ui-sref='{{menu.state}}'>{{menu.name}}</a></li>
+        </div>
+    </ul>
+</section>

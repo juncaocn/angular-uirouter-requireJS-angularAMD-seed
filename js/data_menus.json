@@ -1,0 +1,23 @@
+[
+    {
+        "state": "a",
+        "url": "../html/tpl_a.html",
+        "ctrl": "../js/Ctrl_B",
+        "ctrlName": "ACtrl",
+        "name": "aaa"
+    },
+    {
+        "state": "b",
+        "url": "../html/tpl_b.html",
+        "ctrl": "../js/Ctrl_B",
+        "ctrlName": "BCtrl",
+        "name": "bbb"
+    },
+    {
+        "state": "c",
+        "url": "../html/tpl_c.html",
+        "ctrl": "../js/Ctrl_B",
+        "ctrlName": "CCtrl",
+        "name": "ccc"
+    }
+]
