@@ -7,16 +7,5 @@ define(['app', './constants', './Services'], function (app, constants) {
         _Serv_b.serv2();
 
         _Serv_a.setMenus(_scope);
-
-        // _scope.menus = [{
-        //     state: constants.homeUrl + '.a',
-        //     name: 'aaa'
-        // }, {
-        //     state: constants.homeUrl + '.b',
-        //     name: 'bbb'
-        // }, {
-        //     state: constants.homeUrl + '.c',
-        //     name: 'ccc'
-        // }];
     }]);
 });

@@ -4,58 +4,6 @@ define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd
     //
     var app = ng.module('app', ['ui.router']);
 
-
-    // app.run(function ($http) {
-    //     console.log('app run ...    ');
-    //     $http.get('/js/data_menus.json').success(function (menus) {
-    //         console.log('app run ... ');
-
-
-    //         // var homeUrl = constants.homeUrl
-
-    //         // //
-    //         // _urlRouterProvider.otherwise(homeUrl);
-
-    //         // //
-    //         // _stateProvider.state(homeUrl, amd.route({
-    //         //     url: '/' + homeUrl,
-    //         //     views: {
-    //         //         'top_view': amd.route({
-    //         //             templateUrl: '../html/view_top.html'
-    //         //         }),
-    //         //         'menu_view': amd.route({
-    //         //             templateUrl: '../html/view_menu.html',
-    //         //             controller: 'MenuCtrl',
-    //         //             controllerUrl: '../js/Ctrl_Menu'
-    //         //         }),
-    //         //         'content_view': amd.route({
-    //         //             templateUrl: '../html/view_content.html'
-    //         //         }),
-    //         //     }
-    //         // }));
-
-
-    //         for (var index in menus) {
-    //             menus[index].state = constants.homeUrl + '.' + menus[index].state;
-
-    //             _urlRouterProvider.otherwise(constants.homeUrl);
-    //             var a = constants.homeUrl + '.' + menus[index].state;
-
-    //             _stateProvider.state(a, amd.route({
-    //                 url: '/' + menus[index].state, //显示在地址栏的url
-    //                 views: {
-    //                     'content_view_detail': amd.route({
-    //                         templateUrl: menus[index].url,
-    //                         controller: menus[index].ctrlName,
-    //                         controllerUrl: menus[index].ctrl
-    //                     })
-    //                 }
-    //             }));
-    //         }
-
-    //     });
-    // });
-
     //config router
     var _stateProvider, _urlRouterProvider;
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
