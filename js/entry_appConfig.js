@@ -4,6 +4,9 @@ define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd
     //
     var app = ng.module('app', ['ui.router']);
 
+
+    
+
     //config router
     var _stateProvider, _urlRouterProvider;
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
