@@ -2,7 +2,7 @@
     {
         "state": "a",
         "url": "../html/tpl_a.html",
-        "ctrl": "../js/Ctrl_B",
+        "ctrl": "../js/Ctrl_A",
         "ctrlName": "ACtrl",
         "name": "aaa"
     },
