@@ -1,4 +1,7 @@
-//start angualr app (dependens angular.js & routerConfig.js)
+/**
+ * angualr app start entry (use angularAMD.js to start app ,and depends entry_appConfig.js)
+ * @auther caojun@qingdao
+ */
 define(['./entry_appConfig', 'angularAMD'], function (app, amd) {
     'use strict';
 

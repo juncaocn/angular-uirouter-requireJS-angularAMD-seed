@@ -1,25 +1,24 @@
+/**
+ * angular app config (depends ui-router and angularAMD)
+ * @auther caojun@qingdao
+ */
 define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd, constants) {
     'use strict';
 
     //
     var app = ng.module('app', ['ui.router']);
 
-
-    
-
     //config router
     var _stateProvider, _urlRouterProvider;
     app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         _stateProvider = $stateProvider;
         _urlRouterProvider = $urlRouterProvider;
-
-
         var homeUrl = constants.homeUrl;
 
         //
         $urlRouterProvider.otherwise(homeUrl);
 
-        //
+        // config 1级视图
         $stateProvider.state(homeUrl, amd.route({
             url: '/' + homeUrl,
             views: {
@@ -36,37 +35,31 @@ define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd
                 }),
             }
         }));
-
-        var menus = [
-            { state: "a", url: "../html/tpl_a.html", ctrl: "../js/Ctrl_A", ctrlName: 'ACtrl' },
-            { state: "b", url: "../html/tpl_b.html", ctrl: "../js/Ctrl_B", ctrlName: 'BCtrl' },
-            { state: "c", url: "../html/tpl_c.html", ctrl: "../js/Ctrl_B", ctrlName: 'CCtrl' }
-        ];
-
-        for (var index in menus) {
-            if (!ng.isString(menus[index].state) || !ng.isString(menus[index].url) || !ng.isString(menus[index].url)) {
-                return;
-            }
-
-            var a = homeUrl + '.' + menus[index].state;
-
-            $stateProvider.state(a, amd.route({
-                url: '/' + menus[index].state, //显示在地址栏的url
-                views: {
-                    'content_view_detail': amd.route({
-                        templateUrl: menus[index].url,
-                        controller: menus[index].ctrlName,
-                        controllerUrl: menus[index].ctrl
-                    })
-                }
-            }));
-        }
-
-
     }]);
 
+    // config 2级视图
+    app.run(function ($http) {
+        console.log('app run ...    ');
+        $http.get('/js/data_menus.json').success(function (menus) {
+            console.log('app run ... ');
 
+            var tmp_state;
+            for (var index in menus) {
+                tmp_state = menus[index].state;
+                menus[index].state = constants.homeUrl + '.' + menus[index].state;
 
-    //
+                _stateProvider.state(menus[index].state, amd.route({
+                    url: '/' + tmp_state, //显示在地址栏的url
+                    views: {
+                        'content_view_detail': amd.route({
+                            templateUrl: menus[index].url,
+                            controller: menus[index].ctrlName,
+                            controllerUrl: menus[index].ctrl
+                        })
+                    }
+                }));
+            }
+        });
+    });
     return app;
 });
