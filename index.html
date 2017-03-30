@@ -1,20 +1,16 @@
 <html>
-
 <head></head>
-
 <body>
     <!--3个1级视图-->
-    <div >---view1---</div><br>
+    <div>---view1---</div><br>
     <div ui-view='top_view'></div><br>
 
-    <div >---view2---</div><br>
+    <div>---view2---</div><br>
     <div ui-view='menu_view'></div><br>
-    
+
     <!--内含2级视图-->
-    <div >---view3---</div><br>
+    <div>---view3---</div><br>
     <div ui-view='content_view'></div><br>
 </body>
-
 <script src='libs/require.js' data-main='js/entry_main' async='async'></script>
-
 </html>
