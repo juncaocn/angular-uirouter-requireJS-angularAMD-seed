@@ -2,7 +2,10 @@
  * angular app controllers define
  * @author caojun@qingdao
  */
-define(['app', './constants', './Services'], function (app, constants) {
+define(['app',
+    './constants',
+    './base_resources.js'   //load on first level view (for second level view to use)
+], function (app, constants) {
     'use strict';
 
     /**
