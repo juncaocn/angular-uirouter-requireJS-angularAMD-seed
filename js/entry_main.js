@@ -10,6 +10,7 @@ require.config({
 
     //depends
     paths: {
+        'domReady':'../libs/domReady',
         'angular': '../libs/angular.min',
         'router': '../libs/angular-ui-router',
         'angularAMD': '../libs/angularAMD',

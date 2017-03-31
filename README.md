@@ -1,5 +1,6 @@
 # angular-uirouter-requireJS-angularAMD-seed 
 - depends
+	- domReady
 	- angularjs 
 	- requirejs 
 		- controller / services define
