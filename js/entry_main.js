@@ -1,8 +1,13 @@
-'use strict'
+'use strict';
 
 /**
+<<<<<<< HEAD
  * require config 
  * caojun@qingdao
+=======
+ * require config
+ * @author caojun@qingdao
+>>>>>>> domready
  */
 require.config({
     //
@@ -10,6 +15,7 @@ require.config({
 
     //depends
     paths: {
+        'domReady':'../libs/domReady',
         'angular': '../libs/angular.min',
         'router': '../libs/angular-ui-router',
         'angularAMD': '../libs/angularAMD',

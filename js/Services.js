@@ -44,9 +44,6 @@ define(function (require, exports, module) {
         this.serv2 = function () {
             console.log('servb2');
         };
-
-        // return { serv2: serv2 };
-
     }]);
 });
 

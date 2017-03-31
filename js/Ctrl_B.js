@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * angular app controllers define (multi controller) (commonjs style)
+=======
+ * angular app controllers define (multi controller)
+>>>>>>> domready
  * @author caojun@qingdao
  */
 define(function (require, exports, module) {
