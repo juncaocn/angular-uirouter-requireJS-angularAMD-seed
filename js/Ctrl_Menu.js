@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
  * angular app controllers define (commonjs style)
-=======
- * angular app controllers define
->>>>>>> domready
  * @author caojun@qingdao
  */
 define(function (require, exports, module) {

@@ -1,13 +1,8 @@
 'use strict';
 
 /**
-<<<<<<< HEAD
  * require config 
  * caojun@qingdao
-=======
- * require config
- * @author caojun@qingdao
->>>>>>> domready
  */
 require.config({
     //

@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
  * angular app config (depends ui-router and angularAMD) (commonjs style)
-=======
- * angular app config (depends ui-router and angularAMD)
->>>>>>> domready
  * @author caojun@qingdao
  */
 define(function (require, exports, module) {
