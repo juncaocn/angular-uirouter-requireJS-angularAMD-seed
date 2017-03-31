@@ -1,6 +1,6 @@
 /**
  * angular app controllers define (multi controller)
- * @auther caojun@qingdao
+ * @author caojun@qingdao
  */
 define(['app'], function (app) {
     'use strict';

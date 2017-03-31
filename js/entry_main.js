@@ -1,8 +1,8 @@
-'use strict'
+'use strict';
 
 /**
  * require config
- * caojun@qingdao
+ * @author caojun@qingdao
  */
 require.config({
     //

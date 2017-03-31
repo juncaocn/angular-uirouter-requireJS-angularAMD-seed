@@ -1,6 +1,6 @@
 /**
  * angular app config (depends ui-router and angularAMD)
- * @auther caojun@qingdao
+ * @author caojun@qingdao
  */
 define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd, constants) {
     'use strict';

@@ -1,3 +1,7 @@
+/**
+ * angular service define
+ * @author caojun@qingdao
+ */
 define(['app', './constants'], function (app, constants) {
     'use strict';
 

@@ -1,3 +1,6 @@
+/**
+ * @author caojun@qingdao
+ */
 define(function () {
     'use strict';
 
