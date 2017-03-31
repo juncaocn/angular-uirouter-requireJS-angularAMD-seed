@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * require config
+ * require config 
  * caojun@qingdao
  */
 require.config({

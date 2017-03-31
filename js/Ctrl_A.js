@@ -1,6 +1,6 @@
 /**
  * angular app controllers define (commonjs style)
- * @auther caojun@qingdao
+ * @author caojun@qingdao
  */
 define(function (require, exports, module) {
     var app = require('app');

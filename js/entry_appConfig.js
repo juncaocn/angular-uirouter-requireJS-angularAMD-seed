@@ -1,9 +1,14 @@
 /**
- * angular app config (depends ui-router and angularAMD)
- * @auther caojun@qingdao
+ * angular app config (depends ui-router and angularAMD) (commonjs style)
+ * @author caojun@qingdao
  */
-define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd, constants) {
+define(function (require, exports, module) {
     'use strict';
+
+    require('router');
+    var ng = require('angular');
+    var amd = require('angularAMD');
+    var constants = require('./constants');
 
     //
     var app = ng.module('app', ['ui.router']);

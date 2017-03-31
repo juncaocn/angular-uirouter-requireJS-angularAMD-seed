@@ -1,7 +1,9 @@
-define(function () {
+/**
+ * (commonjs style)
+ * @author caojun@qingdao
+ */
+define(function (require,exports) {
     'use strict';
 
-    return {
-        homeUrl: 'cis'
-    }
+    exports.homeUrl='cis';
 });

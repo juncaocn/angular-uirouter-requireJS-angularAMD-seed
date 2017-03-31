@@ -1,9 +1,12 @@
 /**
- * angualr app start entry (use angularAMD.js to start app ,and depends entry_appConfig.js)
- * @auther caojun@qingdao
+ * angualr app start entry (use angularAMD.js to start app ,and depends entry_appConfig.js) (commonjs style)
+ * @author caojun@qingdao
  */
-define(['./entry_appConfig', 'angularAMD'], function (app, amd) {
+define(function (require, exports, module) {
     'use strict';
 
-    return amd.bootstrap(app);
+    var appconfig = require('./entry_appConfig');
+    var amd = require('angularAMD');
+
+    return amd.bootstrap(appconfig);
 });

@@ -1,9 +1,13 @@
 /**
- * angular app controllers define
- * @auther caojun@qingdao
+ * angular app controllers define (commonjs style)
+ * @author caojun@qingdao
  */
-define(['app', './constants', './Services'], function (app, constants) {
+define(function (require, exports, module) {
     'use strict';
+
+    require('./Services');
+    var app = require('app');
+    var constants = require('./constants');
 
     /**
      * 

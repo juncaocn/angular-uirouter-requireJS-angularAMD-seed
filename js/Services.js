@@ -1,5 +1,12 @@
-define(['app', './constants'], function (app, constants) {
+/**
+ * angular service define (commonjs style)
+ * @author caojun@qingdao
+ */
+define(function (require, exports, module) {
     'use strict';
+    
+    var app = require('app');
+    var constants = require('./constants');
 
     /**
      * 使用return定义
