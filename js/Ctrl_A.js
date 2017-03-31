@@ -1,19 +1,6 @@
 /**
- * angular app controllers define
+ * angular app controllers define (commonjs style)
  * @auther caojun@qingdao
- */
-
-/*define(['app'], function (app) {
-    'use strict';
-
-    
-    app.controller('ACtrl', ['$scope', function (_scope) {
-        _scope.name = 'xxx';
-    }]);
-});*/
-
-/**
- * 兼容commonjs写法
  */
 define(function (require, exports, module) {
     var app = require('app');
