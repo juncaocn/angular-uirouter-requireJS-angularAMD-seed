@@ -11,13 +11,29 @@ define(['app',
     /**
      * 
      */
-    app.controller('MenuCtrl', ['$scope', '$http', 'Serv_a', 'Serv_b',
-        function (_scope, _http, _Serv_a, _Serv_b) {
-            _Serv_a.serv1();
-            _Serv_a.serv2();
-            _Serv_b.serv1();
-            _Serv_b.serv2();
+    // app.controller('MenuCtrl', ['$scope', '$http', 'Serv_a', 'Serv_b', '$rootScope',
+    //     function (_scope, _http, _Serv_a, _Serv_b, _rootScope) {
+    //         if (_rootScope.login_flag) {
 
-            _Serv_a.setMenus(_scope);
-        }]);
+    //             _Serv_a.serv1();
+    //             _Serv_a.serv2();
+    //             _Serv_b.serv1();
+    //             _Serv_b.serv2();
+
+    //             _Serv_a.setMenus(_scope);
+    //         }
+    //     }]);
+
+    app.controller('MenuCtrl',
+        function ($rootScope, $scope, Serv_a, Serv_b) {
+            if ($rootScope.login_flag) {
+
+                Serv_a.serv1();
+                Serv_a.serv2();
+                Serv_b.serv1();
+                Serv_b.serv2();
+
+                Serv_a.setMenus($scope);
+            }
+        });
 });

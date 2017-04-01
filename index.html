@@ -1,14 +1,21 @@
 <html>
+
 <head></head>
+
 <body>
-    <!--3个1级视图-->
+    <!--login view-->
+    <div ui-view='login_view'></div>
+
+
+    <!--home view 3个1级视图-->
     <div ui-view='top_view'></div><br>
-
     <div ui-view='menu_view'></div><br>
-
-    <!--内含2级视图-->
     <div ui-view='content_view'></div><br>
+    <!--内含2级视图-->
 
 </body>
+
+<!--app entry-->
 <script src='libs/require.js' data-main='js/entry_main' async='async'></script>
+
 </html>

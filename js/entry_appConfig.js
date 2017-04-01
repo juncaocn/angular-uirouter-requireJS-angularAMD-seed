@@ -16,14 +16,25 @@ define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd
         var homeUrl = constants.homeUrl;
 
         //
-        $urlRouterProvider.otherwise(homeUrl);
+        $urlRouterProvider.otherwise('login');
 
         // config 1级视图
-        $stateProvider.state(homeUrl, amd.route({
+        $stateProvider.state('login', amd.route({
+            url: '/login',
+            views: {
+                'login_view': amd.route({
+                    templateUrl: '../html/view_login.html',
+                    controller: 'LoginCtrl',
+                    controllerUrl: '../js/Ctrl_Login'
+                })
+            }
+        })).state(homeUrl, amd.route({
             url: '/' + homeUrl,
             views: {
                 'top_view': amd.route({
-                    templateUrl: '../html/view_top.html'
+                    templateUrl: '../html/view_top.html',
+                    controller: 'LogoutCtrl',
+                    controllerUrl: '../js/Ctrl_Login'
                 }),
                 'menu_view': amd.route({
                     templateUrl: '../html/view_menu.html',
@@ -31,7 +42,8 @@ define(['angular', 'router', 'angularAMD', './constants'], function (ng, rt, amd
                     controllerUrl: '../js/Ctrl_Menu'
                 }),
                 'content_view': amd.route({
-                    templateUrl: '../html/view_content.html'
+                    // templateUrl: '../html/view_content.html'
+                    template: "<div>---view3---</div><br><div ui-view='content_view_detail'></div>"
                 }),
             }
         }));

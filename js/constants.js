@@ -5,6 +5,6 @@ define(function () {
     'use strict';
 
     return {
-        homeUrl: 'cis'
+        homeUrl: 'home'
     }
 });
